@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - FurniStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <!-- Left Side - Registration Form -->
+            <div class="col-lg-6 d-flex align-items-center justify-content-center">
+                <div class="w-100" style="max-width: 450px;">
+                    <div class="text-center mb-4">
+                        <a href="index.html" class="text-decoration-none">
+                            <h2 class="text-primary fw-bold">FurniStore</h2>
+                        </a>
+                        <h4 class="fw-bold mt-4">Create Account</h4>
+                        <p class="text-muted">Join us and start shopping for premium furniture</p>
+                    </div>
+
+                    <form id="registerForm" onsubmit="handleRegister(event)">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="password" placeholder="Create a password" required>
+                                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('password')">
+                                    <i class="fas fa-eye" id="passwordToggle"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
+                                <button class="btn btn-outline-secondary" type="button" onclick="togglePassword('confirmPassword')">
+                                    <i class="fas fa-eye" id="confirmPasswordToggle"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="terms" required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the <a href="#" class="text-primary">Terms of Service</a> and <a href="#" class="text-primary">Privacy Policy</a>
+                            </label>
+                        </div>
+
+                        <div class="form-check mb-4">
+                            <input class="form-check-input" type="checkbox" id="newsletter">
+                            <label class="form-check-label" for="newsletter">
+                                Subscribe to our newsletter for updates and offers
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 mb-3">
+                            <span class="register-text">Create Account</span>
+                            <span class="register-spinner d-none">
+                                <span class="spinner-border spinner-border-sm me-2"></span>
+                                Creating account...
+                            </span>
+                        </button>
+                    </form>
+
+                    <div class="text-center mb-4">
+                        <div class="position-relative">
+                            <hr>
+                            <span class="position-absolute top-50 start-50 translate-middle bg-light px-3 text-muted">Or sign up with</span>
+                        </div>
+                    </div>
+
+                    <div class="row g-2 mb-4">
+                        <div class="col-6">
+                            <button class="btn btn-outline-danger w-100" onclick="registerWithGoogle()">
+                                <i class="fab fa-google me-2"></i>Google
+                            </button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-outline-primary w-100" onclick="registerWithFacebook()">
+                                <i class="fab fa-facebook-f me-2"></i>Facebook
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <p class="text-muted">
+                            Already have an account? 
+                            <a href="login.html" class="text-primary text-decoration-none fw-medium">Sign in</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side - Image/Branding -->
+            <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center bg-primary">
+                <div class="text-center text-white">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Modern Living Room" class="img-fluid mb-4 rounded">
+                    <h3 class="fw-bold mb-3">Join Our Furniture Family</h3>
+                    <p class="lead">Create an account to access exclusive deals, track your orders, and enjoy personalized shopping experience.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Toggle password visibility
+        function togglePassword(fieldId) {
+            const passwordInput = document.getElementById(fieldId);
+            const passwordToggle = document.getElementById(fieldId + 'Toggle');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.classList.remove('fa-eye');
+                passwordToggle.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.classList.remove('fa-eye-slash');
+                passwordToggle.classList.add('fa-eye');
+            }
+        }
+
+        // Handle registration form submission
+        function handleRegister(event) {
+            event.preventDefault();
+            
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                password: document.getElementById('password').value,
+                confirmPassword: document.getElementById('confirmPassword').value,
+                terms: document.getElementById('terms').checked,
+                newsletter: document.getElementById('newsletter').checked
+            };
+            
+            // Validate passwords match
+            if (formData.password !== formData.confirmPassword) {
+                showAlert('Passwords do not match', 'danger');
+                return;
+            }
+            
+            // Show loading state
+            const registerText = document.querySelector('.register-text');
+            const registerSpinner = document.querySelector('.register-spinner');
+            const submitBtn = event.target.querySelector('button[type="submit"]');
+            
+            registerText.classList.add('d-none');
+            registerSpinner.classList.remove('d-none');
+            submitBtn.disabled = true;
+            
+            // Simulate API call (In Laravel, this would be handled by your registration system)
+            setTimeout(() => {
+                // Reset button state
+                registerText.classList.remove('d-none');
+                registerSpinner.classList.add('d-none');
+                submitBtn.disabled = false;
+                
+                // For demo purposes, accept any valid form data
+                if (formData.firstName && formData.lastName && formData.email && formData.password && formData.terms) {
+                    // Store user session (In Laravel, this would be handled by sessions/cookies)
+                    localStorage.setItem('user', JSON.stringify({
+                        email: formData.email,
+                        name: formData.firstName + ' ' + formData.lastName,
+                        loggedIn: true
+                    }));
+                    
+                    // Show success message
+                    showAlert('Account created successfully! Redirecting...', 'success');
+                    
+                    // Redirect to home page
+                    setTimeout(() => {
+                        window.location.href = 'index.html';
+                    }, 1500);
+                } else {
+                    showAlert('Please fill in all required fields', 'danger');
+                }
+            }, 2000);
+        }
+
+        // Social registration functions
+        function registerWithGoogle() {
+            showAlert('Google registration integration would be implemented here', 'info');
+        }
+
+        function registerWithFacebook() {
+            showAlert('Facebook registration integration would be implemented here', 'info');
+        }
+
+        // Show alert messages
+        function showAlert(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(alertDiv);
+            
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+</html>

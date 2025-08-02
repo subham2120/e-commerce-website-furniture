@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Office Chair - FurniStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (same as other pages) -->
+    <div class="bg-dark text-white py-2">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <small>
+                        <i class="fas fa-phone me-2"></i>+91 1800-123-4567
+                        <i class="fas fa-envelope ms-3 me-2"></i>support@furnistore.com
+                    </small>
+                </div>
+                <div class="col-md-6 text-end">
+                    <small>
+                        <a href="#" class="text-white text-decoration-none me-3">Track Order</a>
+                        <a href="#" class="text-white text-decoration-none">Help</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white border-bottom sticky-top">
+        <div class="container py-3">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <a href="index.html" class="text-decoration-none">
+                        <h2 class="text-primary mb-0 fw-bold">FurniStore</h2>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for furniture, decor, and more...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3 text-end">
+                    <div class="d-inline-flex align-items-center gap-3">
+                        <div class="position-relative">
+                            <i class="fas fa-heart fs-5 text-muted"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">2</span>
+                        </div>
+                        <div class="position-relative">
+                            <a href="cart.html" class="text-decoration-none text-muted">
+                                <i class="fas fa-shopping-cart fs-5"></i>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">3</span>
+                            </a>
+                        </div>
+                        <div class="dropdown">
+                            <button class="btn btn-link text-muted p-0" type="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user fs-5"></i>
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="login.html">Login</a></li>
+                                <li><a class="dropdown-item" href="register.html">Register</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="bg-light py-3">
+        <div class="container">
+            <ol class="breadcrumb mb-0">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="products.html">Products</a></li>
+                <li class="breadcrumb-item"><a href="products.html?category=office">Office Furniture</a></li>
+                <li class="breadcrumb-item active">Executive Office Chair</li>
+            </ol>
+        </div>
+    </nav>
+
+    <!-- Product Detail -->
+    <div class="container py-5">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-lg-6">
+                <div class="product-gallery">
+                    <!-- Main Image -->
+                    <div class="main-image mb-3">
+                        <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
+                             alt="Executive Office Chair" 
+                             class="img-fluid rounded shadow-sm" 
+                             id="mainImage">
+                        <span class="badge bg-danger position-absolute top-0 start-0 m-3">Best Seller</span>
+                    </div>
+                    
+                    <!-- Thumbnail Images -->
+                    <div class="row g-2">
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1541558869434-2840d308329a?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Chair Front View" 
+                                 class="img-fluid rounded thumbnail-img active" 
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Chair Side View" 
+                                 class="img-fluid rounded thumbnail-img" 
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Chair Back View" 
+                                 class="img-fluid rounded thumbnail-img" 
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Chair Detail" 
+                                 class="img-fluid rounded thumbnail-img" 
+                                 onclick="changeMainImage(this.src)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-6">
+                <div class="product-info">
+                    <div class="mb-2">
+                        <span class="badge bg-primary">Office Furniture</span>
+                    </div>
+                    
+                    <h1 class="fw-bold mb-3">Executive Office Chair</h1>
+                    
+                    <!-- Rating -->
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="star-rating me-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star-half-alt text-warning"></i>
+                        </div>
+                        <span class="text-muted">(4.5) 128 reviews</span>
+                    </div>
+
+                    <!-- Price -->
+                    <div class="price-section mb-4">
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="h3 text-success fw-bold me-3">₹15,999</span>
+                            <span class="h5 text-muted text-decoration-line-through">₹19,999</span>
+                            <span class="badge bg-success ms-2">20% OFF</span>
+                        </div>
+                        <p class="text-muted">Inclusive of all taxes</p>
+                    </div>
+
+                    <!-- Product Description -->
+                    <div class="mb-4">
+                        <h5>Product Description</h5>
+                        <p class="text-muted">
+                            Premium executive office chair with ergonomic design and lumbar support. 
+                            Features high-quality leather upholstery, adjustable height, and 360-degree swivel. 
+                            Perfect for long working hours with maximum comfort and style.
+                        </p>
+                    </div>
+
+                    <!-- Features -->
+                    <div class="mb-4">
+                        <h6>Key Features:</h6>
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-check text-success me-2"></i>Ergonomic design with lumbar support</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Premium leather upholstery</li>
+                            <li><i class="fas fa-check text-success me-2"></i>Adjustable height mechanism</li>
+                            <li><i class="fas fa-check text-success me-2"></i>360-degree swivel base</li>
+                            <li><i class="fas fa-check text-success me-2"></i>5-year warranty</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quantity and Actions -->
+                    <div class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <label class="form-label">Quantity:</label>
+                                <div class="d-flex align-items-center">
+                                    <button class="btn btn-outline-secondary" onclick="updateQuantity(-1)">-</button>
+                                    <span class="mx-3 fw-bold" id="quantity">1</span>
+                                    <button class="btn btn-outline-secondary" onclick="updateQuantity(1)">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-primary flex-fill" onclick="addToCart()">
+                                        <i class="fas fa-shopping-cart me-2"></i>Add to Cart
+                                    </button>
+                                    <button class="btn btn-outline-danger" onclick="toggleWishlist()">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Info -->
+                    <div class="delivery-info bg-light p-3 rounded mb-4">
+                        <h6><i class="fas fa-truck me-2"></i>Delivery Information</h6>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>Delivery in 5-7 business days
+                                </small>
+                            </div>
+                            <div class="col-md-6">
+                                <small class="text-muted">
+                                    <i class="fas fa-shield-alt me-1"></i>Free installation included
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Share -->
+                    <div class="share-section">
+                        <h6>Share this product:</h6>
+                        <div class="d-flex gap-2">
+                            <button class="btn btn-outline-primary btn-sm">
+                                <i class="fab fa-facebook-f"></i>
+                            </button>
+                            <button class="btn btn-outline-info btn-sm">
+                                <i class="fab fa-twitter"></i>
+                            </button>
+                            <button class="btn btn-outline-success btn-sm">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary btn-sm">
+                                <i class="fas fa-link"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button">
+                            Description
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button">
+                            Specifications
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button">
+                            Reviews (128)
+                        </button>
+                    </li>
+                </ul>
+                
+                <div class="tab-content mt-4" id="productTabsContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Product Description</h5>
+                                <p>This premium executive office chair is designed for professionals who spend long hours at their desk. The ergonomic design provides excellent lumbar support, reducing back strain and promoting good posture.</p>
+                                
+                                <h6>Materials & Construction</h6>
+                                <p>Crafted with high-quality genuine leather upholstery and a sturdy metal frame, this chair is built to last. The foam padding is designed to maintain its shape and comfort even after years of use.</p>
+                                
+                                <h6>Comfort Features</h6>
+                                <ul>
+                                    <li>Adjustable seat height (18" - 22")</li>
+                                    <li>Tilt mechanism with tension control</li>
+                                    <li>Padded armrests</li>
+                                    <li>Breathable leather upholstery</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Chair Features" class="img-fluid rounded">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="specifications" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-striped">
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Dimensions</strong></td>
+                                            <td>26" W x 28" D x 42-46" H</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Seat Height</strong></td>
+                                            <td>18" - 22" (Adjustable)</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Weight Capacity</strong></td>
+                                            <td>300 lbs</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Material</strong></td>
+                                            <td>Genuine Leather</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Frame</strong></td>
+                                            <td>Steel with Chrome Finish</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Warranty</strong></td>
+                                            <td>5 Years</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Assembly Information</h6>
+                                <p>This chair comes partially assembled. Basic assembly required (approximately 30 minutes). All necessary tools and hardware included.</p>
+                                
+                                <h6>Care Instructions</h6>
+                                <ul>
+                                    <li>Clean with leather conditioner monthly</li>
+                                    <li>Avoid direct sunlight</li>
+                                    <li>Use coasters to prevent water damage</li>
+                                    <li>Professional cleaning recommended annually</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="text-center mb-4">
+                                    <div class="display-4 fw-bold text-primary">4.5</div>
+                                    <div class="star-rating mb-2">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star text-warning"></i>
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                    </div>
+                                    <p class="text-muted">Based on 128 reviews</p>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <!-- Individual Reviews -->
+                                <div class="review-item border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div>
+                                            <h6 class="mb-1">Rajesh Kumar</h6>
+                                            <div class="star-rating">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">2 days ago</small>
+                                    </div>
+                                    <p class="mb-0">Excellent chair! Very comfortable for long working hours. The leather quality is premium and the lumbar support is perfect.</p>
+                                </div>
+                                
+                                <div class="review-item border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div>
+                                            <h6 class="mb-1">Priya Sharma</h6>
+                                            <div class="star-rating">
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="fas fa-star text-warning"></i>
+                                                <i class="far fa-star text-warning"></i>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">1 week ago</small>
+                                    </div>
+                                    <p class="mb-0">Good quality chair, though assembly took a bit longer than expected. Overall satisfied with the purchase.</p>
+                                </div>
+                                
+                                <button class="btn btn-outline-primary">View All Reviews</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Related Products</h3>
+                <div class="row g-4" id="related-products">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-primary mb-3">FurniStore</h5>
+                    <p class="text-light">Your trusted partner for premium furniture solutions.</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-3">Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+                        <li><a href="products.html" class="text-light text-decoration-none">Products</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-3">Customer Service</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Shipping Info</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h6 class="mb-3">Contact Info</h6>
+                    <p class="mb-1"><i class="fas fa-map-marker-alt me-2"></i>123 Furniture Street, Mumbai</p>
+                    <p class="mb-1"><i class="fas fa-phone me-2"></i>+91 1800-123-4567</p>
+                    <p><i class="fas fa-envelope me-2"></i>support@furnistore.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let currentQuantity = 1;
+
+        // Change main image when thumbnail is clicked
+        function changeMainImage(src) {
+            document.getElementById('mainImage').src = src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.thumbnail-img').forEach(img => {
+                img.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+
+        // Update quantity
+        function updateQuantity(change) {
+            currentQuantity = Math.max(1, currentQuantity + change);
+            document.getElementById('quantity').textContent = currentQuantity;
+        }
+
+        // Add to cart
+        function addToCart() {
+            // In Laravel, this would make an AJAX call to add item to cart
+            showNotification(`Added ${currentQuantity} item(s) to cart!`, 'success');
+        }
+
+        // Toggle wishlist
+        function toggleWishlist() {
+            const heartIcon = document.querySelector('.btn-outline-danger i');
+            if (heartIcon.classList.contains('far')) {
+                heartIcon.classList.remove('far');
+                heartIcon.classList.add('fas');
+                showNotification('Added to wishlist!', 'info');
+            } else {
+                heartIcon.classList.remove('fas');
+                heartIcon.classList.add('far');
+                showNotification('Removed from wishlist!', 'info');
+            }
+        }
+
+        // Show notification
+        function showNotification(message, type) {
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type} alert-dismissible fade show position-fixed`;
+            alertDiv.style.cssText = 'top: 20px; right: 20px; z-index: 9999; min-width: 300px;';
+            alertDiv.innerHTML = `
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            document.body.appendChild(alertDiv);
+            
+            setTimeout(() => {
+                if (alertDiv.parentNode) {
+                    alertDiv.remove();
+                }
+            }, 3000);
+        }
+
+        // Load related products
+        function loadRelatedProducts() {
+            const relatedProducts = [
+                {
+                    name: "Ergonomic Desk Chair",
+                    price: "₹12,999",
+                    image: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                },
+                {
+                    name: "Executive Leather Chair",
+                    price: "₹18,999",
+                    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                },
+                {
+                    name: "Modern Office Chair",
+                    price: "₹14,999",
+                    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                }
+            ];
+
+            const container = document.getElementById('related-products');
+            relatedProducts.forEach(product => {
+                const productCard = `
+                    <div class="col-md-4">
+                        <div class="card product-card h-100 shadow-sm">
+                            <img src="${product.image}" class="card-img-top" alt="${product.name}" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">${product.name}</h6>
+                                <p class="text-success fw-bold">${product.price}</p>
+                                <button class="btn btn-primary btn-sm w-100">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                container.innerHTML += productCard;
+            });
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRelatedProducts();
+        });
+    </script>
+</body>
+</html>
